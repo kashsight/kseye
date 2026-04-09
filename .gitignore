@@ -1,0 +1,113 @@
+# Byte-compiled / optimized / distributed files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Research data (keep history, exclude actual data)
+data/research_history/
+data/sources/
+data/cache/
+
+# User settings (may contain personal info)
+data/config/settings.json
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+session_*.json
+
+# Python docx output (optional, can be large)
+*.docx
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyright
+.pyright/
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# pytest
+.pytest_cache/
+
+# pytype
+.pytype/
+
+# Sphinx documentation
+docs/_build/
+
+# AI/ML models (if any)
+*.pth
+*.pt
+*.onnx
+*.tflite
+
+# Large data files
+*.csv
+*.xlsx
+*.parquet
+
+# Local config overrides
+*.local.json
