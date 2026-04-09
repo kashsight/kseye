@@ -1,0 +1,178 @@
+==============================================================================
+                            RESEARCH QUESTIONNAIRE                            
+==============================================================================
+
+Impact of Mobile Learning on Student Performance
+
+==============================================================================
+
+INSTRUCTIONS
+----------------------------------------
+This questionnaire aims to gather your feedback on the use of mobile learning and its effect on your academic performance. Please answer all questions honestly. Your responses will remain confidential.
+
+
+SECTION: Demographics
+------------------------------------------------------------
+
+  Q1. [DEMOGRAPHIC] What is your age?
+     1. Under 18
+     2. 18-24
+     3. 25-34
+     4. 35-44
+     5. 45 and above
+     * Required
+
+  Q2. [DEMOGRAPHIC] What is your gender?
+     1. Male
+     2. Female
+     3. Non-binary/Third gender
+     4. Prefer not to say
+     * Required
+
+  Q3. [DEMOGRAPHIC] What is your highest level of education?
+     1. High School or below
+     2. Currently enrolled in Undergraduate
+     3. Undergraduate degree completed
+     4. Postgraduate degree
+     * Required
+
+  Q4. [DEMOGRAPHIC] Which field of study do you belong to?
+     1. Science/Technology/Engineering/Math (STEM)
+     2. Arts/Humanities
+     3. Business/Economics
+     4. Social Sciences
+     5. Other
+     * Required
+
+
+SECTION: Mobile Learning Usage
+------------------------------------------------------------
+
+  Q5. [MULTIPLE_CHOICE] How often do you use mobile learning tools (e.g., apps, online courses on mobile) for your studies?
+     1. Daily
+     2. Several times a week
+     3. Once a week
+     4. Rarely
+     5. Never
+     * Required
+
+  Q6. [MULTIPLE_CHOICE] Which mobile learning formats have you used? (Select all that apply)
+     1. Educational apps
+     2. Mobile-accessible videos
+     3. E-books or digital textbooks
+     4. Online quizzes via mobile
+     5. Live classes/webinars on mobile
+     6. None
+     * Required
+
+  Q7. [YES_NO] Do you prefer mobile learning over traditional classroom learning?
+     1. Yes
+     2. No
+     * Required
+
+
+SECTION: Effectiveness of Mobile Learning
+------------------------------------------------------------
+
+  Q8. [LIKERT_SCALE] Mobile learning has improved my academic performance.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q9. [LIKERT_SCALE] Mobile learning helps me understand complex topics better.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q10. [LIKERT_SCALE] Using mobile devices for learning increases my motivation to study.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q11. [LIKERT_SCALE] I am able to manage my study time better with mobile learning tools.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+
+SECTION: Barriers to Mobile Learning
+------------------------------------------------------------
+
+  Q12. [MULTIPLE_CHOICE] Which of the following issues have you faced while using mobile learning? (Select all that apply)
+     1. Poor internet connectivity
+     2. Lack of appropriate devices
+     3. Distractions from notifications/apps
+     4. Lack of technical skills
+     5. Unavailability of suitable content
+     6. Eye strain/fatigue
+     7. None
+     * Required
+
+  Q13. [LIKERT_SCALE] Technical difficulties significantly hinder my mobile learning experience.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q14. [LIKERT_SCALE] I find it difficult to stay focused while studying on mobile devices.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q15. [YES_NO] Have you ever stopped using mobile learning due to technical or usability problems?
+     1. Yes
+     2. No
+     * Required
+
+
+SECTION: Satisfaction and Preferences
+------------------------------------------------------------
+
+  Q16. [LIKERT_SCALE] Overall, I am satisfied with my mobile learning experience.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q17. [LIKERT_SCALE] I find mobile learning platforms easy to use.
+     1. Strongly disagree
+     2. Disagree
+     3. Neutral
+     4. Agree
+     5. Strongly agree
+     * Required
+
+  Q18. [MULTIPLE_CHOICE] Which features do you value most in mobile learning tools? (Select up to 3)
+     1. Interactive content
+     2. Offline accessibility
+     3. Progress tracking
+     4. Multimedia resources (videos, audio)
+     5. Instant feedback/quizzes
+     6. User-friendly design
+     7. Social collaboration features
+     * Required
+
+  Q19. [OPEN_ENDED] What improvements would you suggest for mobile learning platforms to better support your learning?
+
+  Q20. [OPEN_ENDED] Please share any additional comments or experiences related to mobile learning and your academic performance.
+
+==============================================================================

@@ -1,0 +1,465 @@
+Metadata-Version: 2.4
+Name: kseye
+Version: 3.0.0
+Summary: AI-Human Collaborative Research Assistant — Step-by-step guided research with human oversight
+Home-page: https://github.com/kashsightplatform/kseye
+Author: KashSight Platform
+Author-email: kashsightplatform@gmail.com
+License: Proprietary — KashSight Platform
+Project-URL: Bug Reports, https://github.com/kashsightplatform/kseye/issues
+Project-URL: Source, https://github.com/kashsightplatform/kseye
+Project-URL: Documentation, https://github.com/kashsightplatform/kseye/blob/main/README.md
+Keywords: research ai academic scholar parallel agents terminal
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.0
+Requires-Dist: rich>=13.0
+Provides-Extra: docx
+Requires-Dist: python-docx>=0.8.11; extra == "docx"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ks-eye v3: AI-Human Collaborative Research Assistant
+
+**Step-by-step guided research. AI suggests. You decide. Nothing is fully automated.**
+
+---
+
+## Philosophy
+
+ks-eye v3 is **NOT** an automated research tool. It is a **research assistant** that guides you through each step of the research process. At every stage, the AI drafts content and **waits for your review and approval** before moving forward.
+
+| What the AI Does | What You Do |
+|-----------------|-------------|
+| Asks guiding questions | Define your topic and objectives |
+| Drafts a research proposal | Review, edit, approve, or reject |
+| Generates a JSON questionnaire | Review questions, add/remove, approve |
+| Analyzes pasted data | Collect data offline, paste it in |
+| Finds academic sources | Select which sources to include |
+| Writes report sections | Approve or edit each section |
+| Compiles final report | Choose output format, save |
+
+---
+
+## Quick Start
+
+### Install
+
+```bash
+# Prerequisite: tgpt
+go install github.com/aikooo/tgpt/v2@latest
+
+# Install ks-eye
+cd ks_eye
+pip install -e .
+
+# Optional: Word document output
+pip install -e ".[docx]"
+```
+
+### Run
+
+```bash
+kseye        # Launches interactive step-by-step workflow
+```
+
+That's it. The tool will guide you through everything.
+
+---
+
+## The 8-Step Workflow
+
+When you run `kseye`, it walks you through:
+
+### Step 1: Define Your Topic
+```
+AI: "What is your research topic? What are your objectives?
+     Who is your target population? What is the scope?"
+
+You: Type your answers (multi-line, one per line)
+     Press Enter on empty line to finish.
+```
+
+### Step 2: Review Research Proposal
+```
+AI: Drafts a complete proposal (Introduction, Problem Statement,
+    Research Questions, Objectives, Significance, Methodology, Timeline)
+
+You: Read it. Then choose:
+  • "approve"           → move to next step
+  • "edit: add more about X"  → AI revises
+  • "regenerate"        → fresh draft
+```
+
+### Step 3: Design Questionnaire
+```
+AI: Generates a JSON questionnaire with:
+    • Demographics section
+    • 15-25 questions (multiple choice, Likert scales, open-ended, etc.)
+    • Proper structure ready for survey tools
+
+You: Review the JSON. Then choose:
+  • "approve"           → JSON exported for your use
+  • "edit: add 3 questions about satisfaction"  → AI modifies
+  • "regenerate"        → new questionnaire
+```
+
+### Step 4: Collect Data (Offline)
+```
+AI: "Use this questionnaire to create your survey.
+     Distribute it. Collect responses. Format as JSON.
+     Then paste the data here."
+
+You: (Do this offline — Google Forms, SurveyMonkey, paper, etc.)
+     Come back and paste your collected JSON data.
+     Or type "skip" if no data collection needed.
+```
+
+### Step 5: Analyze Data
+```
+AI: Analyzes your pasted JSON data:
+    • Response count, demographics
+    • Key findings per research objective
+    • Statistical summaries (percentages, patterns)
+    • Qualitative insights from open-ended responses
+    • Limitations and recommendations
+
+You: Review the analysis. Choose:
+  • "approve"           → findings accepted
+  • "reanalyze: focus more on demographic differences"  → AI re-analyzes
+```
+
+### Step 6: Literature Review
+```
+AI: Searches academic sources (Google Scholar, Semantic Scholar,
+    CrossRef, arXiv, PubMed, SSRN, Wikipedia, etc.)
+    Presents found sources as a numbered list.
+
+You: Select which sources to include:
+  • "select: 1,3,5,7"   → specific sources
+  • "select: all"        → all sources
+  • "skip"               → no literature review
+
+AI: Synthesizes ONLY your selected sources into a literature review.
+
+You: Review. Approve or request edits.
+```
+
+### Step 7: Write Report (Section by Section)
+```
+AI: Drafts each section one at a time:
+    1. Executive Summary
+    2. Introduction
+    3. Literature Review
+    4. Methodology
+    5. Findings and Results
+    6. Discussion
+    7. Recommendations
+    8. Conclusion
+
+For EACH section:
+You: Read it. Choose:
+  • "approve"           → section finalized
+  • "edit: make it more specific to..."  → AI revises
+  • "skip"              → section excluded
+```
+
+### Step 8: Export Final Report
+```
+AI: Compiles all APPROVED sections into a final report with:
+    • Cover page
+    • Table of contents
+    • All approved sections
+    • References
+
+You: Choose output format:
+  • .txt  → Formatted text file (default)
+  • .docx → Word document (if python-docx installed)
+
+AI: Saves report + saves session for later resumption.
+```
+
+---
+
+## Example Session
+
+```
+$ kseye
+
+  _  __
+ | |/ /___ _   _   ___  ___
+ | ' // _ \ | | | / __|/ _ \
+ | . \  __/ |_| | \__ \  __/
+ |_|\_\___|\__, | |___/\___|
+           |___/           v3
+
+  AI-Human Collaborative Research Assistant
+  AI suggests. You decide. Nothing is fully automated.
+
+═══════════════════════════════════════════════════
+ Step 1: Topic Definition
+═══════════════════════════════════════════════════
+
+  Let's define your research topic.
+
+  Please tell me:
+    1. What is your research topic?
+    2. What are your main objectives?
+    3. Who is your target population?
+    4. What is the scope/context?
+
+  ► Enter your topic details (empty line to finish):
+  ► Impact of mobile learning on student performance
+  ► Assess effectiveness, identify barriers, measure satisfaction
+  ► High school students aged 14-18
+  ► Urban schools in Nairobi, Kenya
+  ►
+  ✓ Topic saved. Next: I'll draft a research proposal.
+
+═══════════════════════════════════════════════════
+ Step 2: Proposal Generation
+═══════════════════════════════════════════════════
+  Generating research proposal...
+
+  ┌── 📄 Research Proposal Draft ──────────────────┐
+  │ 1. Introduction and Background...             │
+  │ Mobile learning has transformed education...   │
+  │ [full proposal displayed here]                 │
+  └─────────────────────────────────────────────────┘
+
+  ► Review proposal — approve / edit / regenerate (approve):
+  ► approve
+  ✓ Proposal approved! Next: I'll design a questionnaire.
+
+═══════════════════════════════════════════════════
+ Step 3: Questionnaire Design
+═══════════════════════════════════════════════════
+  Designing questionnaire...
+
+  ┌── 📋 Questionnaire Draft ──────────────────────┐
+  │ {                                               │
+  │   "title": "Mobile Learning Survey",           │
+  │   "sections": [                                 │
+  │     {                                           │
+  │       "section_name": "Demographics",          │
+  │       "questions": [                            │
+  │         {                                       │
+  │           "id": "Q1",                          │
+  │           "type": "demographic",               │
+  │           "text": "What is your age?",         │
+  │           "options": ["14", "15", "16", ...], │
+  │           "required": true                     │
+  │         }                                       │
+  │       ]                                         │
+  │     },                                          │
+  │     ... (20+ questions)                        │
+  │   }                                             │
+  └─────────────────────────────────────────────────┘
+
+  ► Review questionnaire — approve / edit / regenerate (approve):
+  ► edit: Add 3 questions about parental involvement
+  [AI revises...]
+  ► approve
+  ✓ Questionnaire approved and exported as JSON!
+
+  NEXT STEPS (you do this offline):
+    1. Copy the JSON questionnaire above
+    2. Create your survey (Google Forms, etc.)
+    3. Distribute to your target population
+    4. Collect responses
+    5. Format responses as JSON
+    6. Come back and paste the collected data
+
+═══════════════════════════════════════════════════
+ Step 4: Data Collection
+═══════════════════════════════════════════════════
+
+  [You paste your collected JSON data here]
+
+  ✓ Data received: 147 responses detected.
+
+═══════════════════════════════════════════════════
+ Step 5: Data Analysis
+═══════════════════════════════════════════════════
+  Analyzing your data...
+
+  ┌── 📊 Data Analysis ────────────────────────────┐
+  │ 1. DATA OVERVIEW                              │
+  │    Total responses: 147                        │
+  │    Response rate: 73.5%                        │
+  │                                                │
+  │ 2. DEMOGRAPHIC ANALYSIS                        │
+  │    Age distribution: 14 (28%), 15 (31%)...     │
+  │                                                │
+  │ 3. KEY FINDINGS                                │
+  │    Objective 1: 68% reported improved...       │
+  │    [full analysis...]                          │
+  └─────────────────────────────────────────────────┘
+
+  ► Review analysis — approve / reanalyze (approve):
+  ► approve
+  ✓ Analysis approved.
+
+... (continues through Steps 6, 7, 8)
+```
+
+---
+
+## Questionnaire JSON Format
+
+The questionnaire uses this structure:
+
+```json
+{
+  "title": "Research Questionnaire",
+  "description": "Instructions for respondents",
+  "sections": [
+    {
+      "section_name": "Demographics",
+      "questions": [
+        {
+          "id": "Q1",
+          "type": "demographic",
+          "text": "What is your age?",
+          "options": ["14", "15", "16", "17", "18"],
+          "required": true
+        },
+        {
+          "id": "Q5",
+          "type": "likert_scale",
+          "text": "Mobile learning improves my understanding",
+          "options": ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
+          "required": true
+        },
+        {
+          "id": "Q10",
+          "type": "open_ended",
+          "text": "What challenges do you face with mobile learning?",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
+```
+
+Question types: `multiple_choice`, `likert_scale`, `yes_no`, `open_ended`, `ranking`, `matrix`, `demographic`
+
+---
+
+## Collected Data Format
+
+When you paste your collected data, use this structure:
+
+```json
+{
+  "responses": [
+    {
+      "respondent_id": "R001",
+      "demographics": {
+        "age": "16",
+        "gender": "Female"
+      },
+      "answers": {
+        "Q1": "16",
+        "Q5": "Agree",
+        "Q10": "Limited internet access at home"
+      }
+    }
+  ]
+}
+```
+
+---
+
+## Commands
+
+```bash
+kseye              # Interactive step-by-step workflow (main use)
+kseye version      # Show version
+```
+
+That's intentionally minimal. The tool is designed to be used interactively, not via flags.
+
+---
+
+## Output
+
+### Text (.txt) — Default
+Formatted research paper with:
+- Cover page with topic and date
+- Table of contents
+- All human-approved sections
+- Professional formatting
+
+### Word (.docx) — Optional
+Professional Word document with styled headings, tables, and sections.
+
+### Session (.json) — Auto-saved
+Full session state saved automatically for later resumption.
+
+---
+
+## AI Providers
+
+Configure which AI provider each agent uses:
+
+```bash
+kseye              # Interactive → manage providers from menu
+```
+
+Available: `sky` (free), `phind` (free), `gemini`, `openai`, `groq`, `deepseek`, `ollama` (local), `kimi` (free), `isou` (free), `pollinations` (free)
+
+---
+
+## Architecture
+
+```
+ks_eye/
+├── engines/
+│   ├── research_assistant.py  ← Core: 8-step workflow engine
+│   ├── tgpt_engine.py         ← AI provider integration
+│   ├── scholar_search.py      ← Academic source search (10 types)
+│   └── docx_formatter.py      ← Word document output
+├── cli.py                     ← Interactive step-by-step CLI
+├── config.py                  ← Settings + session management
+├── ui.py                      ← Clean display components
+└── data/
+    ├── research_history/      ← Sessions and reports
+    └── config/
+        ├── settings.json
+        └── agent_providers.json
+```
+
+---
+
+## License
+
+Proprietary — KashSight Platform

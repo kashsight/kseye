@@ -1,0 +1,31 @@
+{
+  "username": "researcher",
+  "default_provider": "sky",
+  "agent_timeout": 60,
+  "max_agents": 15,
+  "max_sources_per_query": 20,
+  "auto_save": true,
+  "show_methodology": true,
+  "show_sources": true,
+  "show_suggestions": true,
+  "output_format": "both",
+  "scholar_scrape": true,
+  "parallel_execution": true,
+  "research_history": [
+    {
+      "timestamp": "20260408_125249",
+      "query": "",
+      "title": "Research Paper: Effects Of Musterbation On Sexual Health Amd Overall General Health",
+      "file": "research_20260408_125249.json",
+      "sources_count": 6
+    },
+    {
+      "timestamp": "20260408_131512",
+      "query": "",
+      "title": "Research Paper: Screen Time Effect On Eye Health",
+      "file": "research_20260408_131512.json",
+      "sources_count": 6
+    }
+  ],
+  "updated_at": "2026-04-08T13:15:12.622932"
+}

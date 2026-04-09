@@ -1,0 +1,73 @@
+{
+  "literature_review": {
+    "agents": ["web_search", "academic_search", "literature_review",
+               "citation_analyzer", "trend_analysis", "gap_analysis",
+               "summary_generator", "final_synthesis", "timeline_generator",
+               "wikipedia_extractor", "bias_detection"],
+    "passes": 2,
+    "description": "Comprehensive literature review with timeline and gap analysis"
+  },
+  "debate": {
+    "agents": ["web_search", "academic_search", "data_synthesis",
+               "counter_argument", "fact_checker", "bias_detection",
+               "sentiment_analysis", "final_synthesis", "peer_reviewer_1",
+               "peer_reviewer_2", "source_evaluator"],
+    "passes": 3,
+    "description": "Pro vs. counter argument debate with fact-checking and peer review"
+  },
+  "meta_analysis": {
+    "agents": ["academic_search", "statistical_analysis", "data_synthesis",
+               "citation_analyzer", "fact_checker", "source_verification",
+               "trend_analysis", "final_synthesis", "knowledge_graph_builder",
+               "source_evaluator", "fact_density_scorer"],
+    "passes": 3,
+    "description": "Statistical meta-analysis across studies with knowledge graph"
+  },
+  "policy_brief": {
+    "agents": ["web_search", "academic_search", "data_synthesis",
+               "trend_analysis", "counter_argument", "sentiment_analysis",
+               "news_analyst", "summary_generator", "final_synthesis",
+               "wikipedia_extractor", "bias_detection"],
+    "passes": 2,
+    "description": "Policy-focused brief with news sentiment and counter-arguments"
+  },
+  "deep_research": {
+    "agents": "__ALL__",
+    "passes": 5,
+    "description": "Maximum depth research with all agents and 5 recursive passes"
+  },
+  "quick": {
+    "agents": ["web_search", "academic_search", "data_synthesis",
+               "summary_generator", "final_synthesis"],
+    "passes": 1,
+    "description": "Quick 5-agent single-pass research"
+  },
+  "standard": {
+    "agents": ["web_search", "academic_search", "data_synthesis",
+               "citation_analyzer", "source_verification", "fact_checker",
+               "summary_generator", "final_synthesis"],
+    "passes": 2,
+    "description": "Standard 8-agent research with 2 passes (recommended)"
+  },
+  "comparative": {
+    "agents": ["web_search", "academic_search", "data_synthesis",
+               "counter_argument", "comparison_engine", "sentiment_analysis",
+               "fact_checker", "summary_generator", "final_synthesis"],
+    "passes": 2,
+    "description": "Compare multiple perspectives on a topic"
+  },
+  "news_analysis": {
+    "agents": ["web_search", "news_analyst", "sentiment_analysis",
+               "fact_checker", "bias_detection", "trend_analysis",
+               "data_synthesis", "summary_generator", "final_synthesis"],
+    "passes": 2,
+    "description": "News-focused analysis with bias and sentiment detection"
+  },
+  "technical_report": {
+    "agents": ["web_search", "academic_search", "code_analyzer",
+               "technical_writer", "data_synthesis", "statistical_analysis",
+               "fact_checker", "summary_generator", "final_synthesis"],
+    "passes": 3,
+    "description": "Technical deep-dive with code analysis and statistics"
+  }
+}

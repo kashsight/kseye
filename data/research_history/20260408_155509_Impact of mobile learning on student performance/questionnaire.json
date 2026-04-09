@@ -1,0 +1,296 @@
+{
+  "title": "Impact of Mobile Learning on Student Performance",
+  "description": "This questionnaire aims to gather your feedback on the use of mobile learning and its effect on your academic performance. Please answer all questions honestly. Your responses will remain confidential.",
+  "sections": [
+    {
+      "section_name": "Demographics",
+      "questions": [
+        {
+          "id": "Q1",
+          "type": "demographic",
+          "text": "What is your age?",
+          "options": [
+            "Under 18",
+            "18-24",
+            "25-34",
+            "35-44",
+            "45 and above"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q2",
+          "type": "demographic",
+          "text": "What is your gender?",
+          "options": [
+            "Male",
+            "Female",
+            "Non-binary/Third gender",
+            "Prefer not to say"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q3",
+          "type": "demographic",
+          "text": "What is your highest level of education?",
+          "options": [
+            "High School or below",
+            "Currently enrolled in Undergraduate",
+            "Undergraduate degree completed",
+            "Postgraduate degree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q4",
+          "type": "demographic",
+          "text": "Which field of study do you belong to?",
+          "options": [
+            "Science/Technology/Engineering/Math (STEM)",
+            "Arts/Humanities",
+            "Business/Economics",
+            "Social Sciences",
+            "Other"
+          ],
+          "required": true,
+          "hint": "Select the most applicable field"
+        }
+      ]
+    },
+    {
+      "section_name": "Mobile Learning Usage",
+      "questions": [
+        {
+          "id": "Q5",
+          "type": "multiple_choice",
+          "text": "How often do you use mobile learning tools (e.g., apps, online courses on mobile) for your studies?",
+          "options": [
+            "Daily",
+            "Several times a week",
+            "Once a week",
+            "Rarely",
+            "Never"
+          ],
+          "required": true,
+          "hint": "Please consider any mobile device usage for educational purposes."
+        },
+        {
+          "id": "Q6",
+          "type": "multiple_choice",
+          "text": "Which mobile learning formats have you used? (Select all that apply)",
+          "options": [
+            "Educational apps",
+            "Mobile-accessible videos",
+            "E-books or digital textbooks",
+            "Online quizzes via mobile",
+            "Live classes/webinars on mobile",
+            "None"
+          ],
+          "required": true,
+          "hint": "If multiple, choose the most frequent ones."
+        },
+        {
+          "id": "Q7",
+          "type": "yes_no",
+          "text": "Do you prefer mobile learning over traditional classroom learning?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true,
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "section_name": "Effectiveness of Mobile Learning",
+      "questions": [
+        {
+          "id": "Q8",
+          "type": "likert_scale",
+          "text": "Mobile learning has improved my academic performance.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q9",
+          "type": "likert_scale",
+          "text": "Mobile learning helps me understand complex topics better.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q10",
+          "type": "likert_scale",
+          "text": "Using mobile devices for learning increases my motivation to study.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q11",
+          "type": "likert_scale",
+          "text": "I am able to manage my study time better with mobile learning tools.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "section_name": "Barriers to Mobile Learning",
+      "questions": [
+        {
+          "id": "Q12",
+          "type": "multiple_choice",
+          "text": "Which of the following issues have you faced while using mobile learning? (Select all that apply)",
+          "options": [
+            "Poor internet connectivity",
+            "Lack of appropriate devices",
+            "Distractions from notifications/apps",
+            "Lack of technical skills",
+            "Unavailability of suitable content",
+            "Eye strain/fatigue",
+            "None"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q13",
+          "type": "likert_scale",
+          "text": "Technical difficulties significantly hinder my mobile learning experience.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q14",
+          "type": "likert_scale",
+          "text": "I find it difficult to stay focused while studying on mobile devices.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q15",
+          "type": "yes_no",
+          "text": "Have you ever stopped using mobile learning due to technical or usability problems?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true,
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "section_name": "Satisfaction and Preferences",
+      "questions": [
+        {
+          "id": "Q16",
+          "type": "likert_scale",
+          "text": "Overall, I am satisfied with my mobile learning experience.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q17",
+          "type": "likert_scale",
+          "text": "I find mobile learning platforms easy to use.",
+          "options": [
+            "Strongly disagree",
+            "Disagree",
+            "Neutral",
+            "Agree",
+            "Strongly agree"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q18",
+          "type": "multiple_choice",
+          "text": "Which features do you value most in mobile learning tools? (Select up to 3)",
+          "options": [
+            "Interactive content",
+            "Offline accessibility",
+            "Progress tracking",
+            "Multimedia resources (videos, audio)",
+            "Instant feedback/quizzes",
+            "User-friendly design",
+            "Social collaboration features"
+          ],
+          "required": true,
+          "hint": ""
+        },
+        {
+          "id": "Q19",
+          "type": "open_ended",
+          "text": "What improvements would you suggest for mobile learning platforms to better support your learning?",
+          "options": [],
+          "required": false,
+          "hint": "Please be as specific as possible."
+        },
+        {
+          "id": "Q20",
+          "type": "open_ended",
+          "text": "Please share any additional comments or experiences related to mobile learning and your academic performance.",
+          "options": [],
+          "required": false,
+          "hint": ""
+        }
+      ]
+    }
+  ]
+}

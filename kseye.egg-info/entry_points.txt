@@ -1,0 +1,3 @@
+[console_scripts]
+ks-eye = ks_eye.cli:main
+kseye = ks_eye.cli:main

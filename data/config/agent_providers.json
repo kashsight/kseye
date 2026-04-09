@@ -1,0 +1,17 @@
+{
+  "web_search": {"provider": "sky", "custom_prompt": ""},
+  "academic_search": {"provider": "gemini", "custom_prompt": ""},
+  "methodology_extractor": {"provider": "openai", "custom_prompt": ""},
+  "citation_analyzer": {"provider": "phind", "custom_prompt": ""},
+  "data_synthesis": {"provider": "deepseek", "custom_prompt": ""},
+  "literature_review": {"provider": "groq", "custom_prompt": ""},
+  "trend_analysis": {"provider": "sky", "custom_prompt": ""},
+  "counter_argument": {"provider": "phind", "custom_prompt": ""},
+  "reference_checker": {"provider": "gemini", "custom_prompt": ""},
+  "summary_generator": {"provider": "sky", "custom_prompt": ""},
+  "outline_builder": {"provider": "sky", "custom_prompt": ""},
+  "fact_checker": {"provider": "openai", "custom_prompt": ""},
+  "gap_analysis": {"provider": "phind", "custom_prompt": ""},
+  "source_verification": {"provider": "gemini", "custom_prompt": ""},
+  "final_synthesis": {"provider": "openai", "custom_prompt": ""}
+}

@@ -1,0 +1,39 @@
+{
+  "template_name": "survey_analysis",
+  "template_version": "1.0",
+  "description": "Analyze survey/questionnaire data with online source context",
+  "workflow": ["scrape_sources", "load_json_data", "analyze", "report"],
+  "scraping": {
+    "sources": ["google_scholar", "semantic_scholar", "crossref", "wikipedia", "web"],
+    "max_per_source": 8,
+    "search_queries_from_topic": 3
+  },
+  "data_input": {
+    "format": "json_file",
+    "expected_structure": {
+      "topic": "string",
+      "responses": [
+        {
+          "respondent_id": "string",
+          "demographics": {},
+          "answers": {}
+        }
+      ]
+    },
+    "alternative_structures": ["list_of_dicts", "nested_data", "custom"]
+  },
+  "analysis": {
+    "demographics": true,
+    "frequency_counts": true,
+    "cross_tabulation": true,
+    "open_coded_themes": true,
+    "statistical_summary": true,
+    "compare_with_literature": true
+  },
+  "output": {
+    "format": "txt",
+    "sections": ["executive_summary", "methodology", "data_overview", "key_findings", "literature_context", "recommendations", "sources"],
+    "include_raw_data": false,
+    "include_sources": true
+  }
+}
