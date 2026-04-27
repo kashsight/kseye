@@ -44,7 +44,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 | Method | Details |
 |--------|---------|
-| **Email** | kashsightplatform@gmail.com |
+| **Email** | kashsight@gmail.com |
 | **Confidentiality** | All reports kept confidential |
 | **Response time** | Within 48 hours |
 

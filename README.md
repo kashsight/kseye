@@ -1,11 +1,12 @@
 ```
-  _  __         _       ____  _       _     _
- | |/ /__ _ ___| |__   / ___|(_) __ _| |__ | |_
- | ' // _` / __| '_ \  \___ \| |/ _` | '_ \| __|
- | . \ (_| \__ \ | | |  ___) | | (_| | | | | |_
- |_|\_\__,_|___/_| |_| |____/|_|\__, |_| |_|\__|
-                                |___/
-                     a Kash Sight project
+ ██╗  ██╗███████╗    ███████╗██╗   ██╗███████╗
+ ██║ ██╔╝██╔════╝    ██╔════╝╚██╗ ██╔╝██╔════╝
+ █████╔╝ ███████╗    █████╗   ╚████╔╝ █████╗
+ ██╔═██╗ ╚════██║    ██╔══╝    ╚██╔╝  ██╔══╝
+ ██║  ██╗███████║    ███████╗   ██║   ███████╗
+ ╚═╝  ╚═╝╚══════╝    ╚══════╝   ╚═╝   ╚══════╝
+   AI Research Tool — Multi-Agent Search, Citations, Reports
+                a Kashsight project by @kashsight
 ```
 
 <p align="center">
@@ -13,7 +14,7 @@
   <img src="https://img.shields.io/badge/python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/termux-✓-25D366?style=for-the-badge&logo=android&logoColor=white" alt="Termux" />
   <img src="https://img.shields.io/badge/license-MIT-00D4AA?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/github/stars/kashsightplatform/kseye?style=for-the-badge&color=FFD43B" alt="Stars" />
+  <img src="https://img.shields.io/github/stars/kashsight/kseye?style=for-the-badge&color=FFD43B" alt="Stars" />
 </p>
 
 <p align="center">
@@ -449,15 +450,15 @@ Visit **[kash-sight.web.app/kseye.html](https://kash-sight.web.app/kseye.html)**
 
 <p align="center">
   <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square" />
-  <strong>by <a href="https://github.com/kashsightplatform">KashSight</a></strong>
+  <strong>by <a href="https://github.com/kashsight">KashSight</a></strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/kashsightplatform/kseye/stargazers">
-    <img src="https://img.shields.io/github/stars/kashsightplatform/kseye?style=social" alt="Stars" />
+  <a href="https://github.com/kashsight/kseye/stargazers">
+    <img src="https://img.shields.io/github/stars/kashsight/kseye?style=social" alt="Stars" />
   </a>
-  <a href="https://github.com/kashsightplatform/kseye/network/members">
-    <img src="https://img.shields.io/github/forks/kashsightplatform/kseye?style=social" alt="Forks" />
+  <a href="https://github.com/kashsight/kseye/network/members">
+    <img src="https://img.shields.io/github/forks/kashsight/kseye?style=social" alt="Forks" />
   </a>
 </p>
 

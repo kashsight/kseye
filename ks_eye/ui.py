@@ -1,77 +1,85 @@
 """
-ks-eye UI — v1: Human-in-the-Loop Research Assistant
-Clean, step-by-step display components
+ks-eye v2.0 — Clean Console UI
+Minimal, Rich-based display utilities.
 """
 
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
-from rich.text import Text
+from rich.markdown import Markdown
+from rich.progress import Progress, SpinnerColumn, TextColumn
 
 console = Console()
 
-# ── ASCII Art Banner ──
-BANNER = Text.assemble(
-    ("  ██╗  ██╗ █████╗ ██████╗ ██████╗ ██╗   ██╗    ", "bright_cyan"),
-    (" ██████╗ ██████╗  █████╗ ███╗   ██╗\n", "cyan"),
-    ("  ██║ ██╔╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝    ", "bright_cyan"),
-    ("██╔════╝ ██╔══██╗██╔══██╗████╗  ██║\n", "cyan"),
-    ("  █████╔╝ ███████║██████╔╝██████╔╝ ╚████╔╝     ", "bright_cyan"),
-    ("██║  ███╗██████╔╝███████║██╔██╗ ██║\n", "cyan"),
-    ("  ██╔═██╗ ██╔══██║██╔══██╗██╔══██╗  ╚██╔╝      ", "bright_cyan"),
-    ("██║   ██║██╔══██╗██╔══██║██║╚██╗██║\n", "cyan"),
-    ("  ██║  ██╗██║  ██║██║  ██║██║  ██║   ██║       ", "bright_cyan"),
-    ("╚██████╔╝██║  ██║██║  ██║██║ ╚████║\n", "cyan"),
-    ("  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ", "bright_cyan"),
-    (" ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝\n", "cyan"),
-    ("                                                    ", "bright_cyan"),
-    ("v1.0.0", "bold yellow"),
-)
 
-
-def show_banner():
-    console.print()
-    console.print(BANNER)
-    console.print()
-    console.print(
-        Panel(
-            "[bold cyan]AI-Human Collaborative Research Assistant[/bold cyan]\n"
-            "[dim]Step-by-step guided research. AI suggests. You decide. Nothing is fully automated.[/dim]",
-            style="cyan",
-            border_style="bright_cyan",
-        )
+def banner():
+    """Main application banner."""
+    return Panel(
+        "[bold cyan]ks-eye[/bold cyan] v2.0 — [dim]Online AI Research Platform[/dim]\n"
+        "[dim]Scrape real websites → AI reads & analyzes → Structured reports[/dim]",
+        border_style="cyan",
     )
-    console.print()
 
 
 def show_success(msg):
-    console.print(f"[bold green]✓ {msg}[/bold green]")
+    console.print(f"[bold green]✓[/bold green] {msg}")
 
 
 def show_error(msg):
-    console.print(f"[bold red]✗ {msg}[/bold red]")
+    console.print(f"[bold red]✗[/bold red] {msg}")
 
 
 def show_warning(msg):
-    console.print(f"[bold yellow]⚠ {msg}[/bold yellow]")
+    console.print(f"[bold yellow]⚠[/bold yellow] {msg}")
 
 
 def show_info(msg):
-    console.print(f"[bold cyan]ℹ {msg}[/bold cyan]")
+    console.print(f"[bold blue]ℹ[/bold blue] {msg}")
 
 
-def prompt_user(text, default=None):
+def show_section(title):
+    console.print(f"\n[bold green]━━━ {title} ━━━[/bold green]")
+
+
+def show_panel(title, content, border_style="cyan"):
+    console.print(Panel(content, title=title, border_style=border_style))
+
+
+def show_panel_md(title, content, border_style="cyan"):
+    """Show a panel with markdown rendering."""
+    console.print(Panel(Markdown(content), title=title, border_style=border_style))
+
+
+def prompt_user(question, default=""):
+    """Prompt user for input with optional default."""
     if default:
-        r = console.input(f"[bold green]  ► {text}[/bold green] [dim]({default})[/dim]: ")
-        return r if r.strip() else default
-    return console.input(f"[bold green]  ► {text}[/bold green]: ")
+        return console.input(f"[bold cyan]?[/bold cyan] {question} [dim]({default})[/dim]: ").strip() or default
+    return console.input(f"[bold cyan]?[/bold cyan] {question}: ").strip()
 
 
-def display_table_data(title, headers, rows):
-    table = Table(title=f"[bold cyan]{title}[/bold cyan]", border_style="cyan", show_header=True, header_style="bold magenta")
+def confirm(question, default=True):
+    """Ask yes/no question."""
+    suffix = "Y/n" if default else "y/N"
+    answer = console.input(f"[bold cyan]?[/bold cyan] {question} [{suffix}]: ").strip().lower()
+    if not answer:
+        return default
+    return answer in ("y", "yes", "ye", "1", "true")
+
+
+def make_progress():
+    """Create a progress spinner."""
+    return Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        console=console,
+    )
+
+
+def display_table(headers, rows):
+    """Display tabular data."""
+    table = Table()
     for h in headers:
-        table.add_column(h, style="cyan")
+        table.add_column(h)
     for row in rows:
         table.add_row(*[str(c) for c in row])
     console.print(table)
-    console.print()

@@ -42,7 +42,7 @@ git clone https://github.com/YOUR_USERNAME/kseye.git
 cd kseye
 
 # Add upstream
-git remote add upstream https://github.com/kashsightplatform/kseye.git
+git remote add upstream https://github.com/kashsight/kseye.git
 ```
 
 ### 2. Install Dependencies
@@ -278,7 +278,7 @@ Your PR → Auto-checks → Maintainer Review → Merge
 
 ## 🐛 Reporting Bugs
 
-Open an [issue](https://github.com/kashsightplatform/kseye/issues) with:
+Open an [issue](https://github.com/kashsight/kseye/issues) with:
 
 ```markdown
 ### Description
@@ -306,7 +306,7 @@ What should have happened.
 
 ## 💡 Feature Requests
 
-Open an [issue](https://github.com/kashsightplatform/kseye/issues) with:
+Open an [issue](https://github.com/kashsight/kseye/issues) with:
 
 ```markdown
 ### Problem
@@ -335,5 +335,5 @@ By contributing, you agree that your contributions will be licensed under the pr
 </p>
 
 <p align="center">
-  <a href="https://github.com/kashsightplatform/kseye">Back to README</a>
+  <a href="https://github.com/kashsight/kseye">Back to README</a>
 </p>

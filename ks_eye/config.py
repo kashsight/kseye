@@ -1,5 +1,6 @@
 """
-ks-eye Configuration — v1: Human-in-the-Loop Research Assistant
+ks-eye v2.0 — Simplified Configuration
+Online-first research platform
 """
 
 import json
@@ -19,13 +20,13 @@ for d in [CONFIG_DIR, RESEARCH_DIR, SOURCES_DIR, CACHE_DIR]:
 SETTINGS_FILE = os.path.join(CONFIG_DIR, "settings.json")
 AGENT_PROVIDERS_FILE = os.path.join(CONFIG_DIR, "agent_providers.json")
 
-from ks_eye import DEFAULT_AGENT_PROVIDERS
+from ks_eye import DEFAULT_AGENT_PROVIDERS, DEFAULT_PROVIDER
 
 DEFAULT_SETTINGS = {
-    "username": "researcher",
-    "default_provider": "sky",
-    "agent_timeout": 60,
-    "citation_style": "apa",
+    "default_provider": DEFAULT_PROVIDER,
+    "scrape_depth": 2,
+    "max_sources": 30,
+    "agent_timeout": 120,
     "auto_save_sessions": True,
     "research_sessions": [],
     "created_at": datetime.now().isoformat(),
@@ -34,6 +35,8 @@ DEFAULT_SETTINGS = {
 
 
 class Config:
+    """Global configuration manager."""
+
     DATA_DIR = DATA_DIR
     CONFIG_DIR = CONFIG_DIR
     RESEARCH_DIR = RESEARCH_DIR
@@ -48,7 +51,10 @@ class Config:
         if os.path.exists(SETTINGS_FILE):
             try:
                 with open(SETTINGS_FILE, "r") as f:
-                    return json.load(f)
+                    saved = json.load(f)
+                    # Merge with defaults
+                    merged = {**DEFAULT_SETTINGS, **saved}
+                    return merged
             except (json.JSONDecodeError, IOError):
                 pass
         self._save_settings(DEFAULT_SETTINGS)
@@ -82,41 +88,40 @@ class Config:
         self.settings[key] = value
         self._save_settings(self.settings)
 
-    def get_all(self):
-        return self.settings.copy()
-
     def get_agent_provider(self, agent_type):
         if agent_type in self.agent_providers:
-            return self.agent_providers[agent_type].get("provider", self.settings.get("default_provider", "sky"))
-        return self.settings.get("default_provider", "sky")
+            return self.agent_providers[agent_type].get(
+                "provider", self.settings.get("default_provider", DEFAULT_PROVIDER)
+            )
+        return self.settings.get("default_provider", DEFAULT_PROVIDER)
 
     def set_agent_provider(self, agent_type, provider):
         if agent_type in self.agent_providers:
             self.agent_providers[agent_type]["provider"] = provider
             self._save_agent_providers(self.agent_providers)
 
-    def get_all_agent_providers(self):
-        return self.agent_providers.copy()
-
     def save_session(self, session_data):
-        """Save a research session"""
+        """Save a research session to disk."""
         os.makedirs(RESEARCH_DIR, exist_ok=True)
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"session_{ts}.json"
-        filepath = os.path.join(RESEARCH_DIR, filename)
-        with open(filepath, "w") as f:
-            json.dump(session_data, f, indent=2)
+        topic_slug = "".join(c if c.isalnum() else "_" for c in session_data.get("topic", "untitled"))[:60]
+        folder = os.path.join(RESEARCH_DIR, f"{topic_slug}_{ts}")
+        os.makedirs(folder, exist_ok=True)
+
+        session_file = os.path.join(folder, "session.json")
+        with open(session_file, "w") as f:
+            json.dump(session_data, f, indent=2, default=str)
 
         if "research_sessions" not in self.settings:
             self.settings["research_sessions"] = []
         self.settings["research_sessions"].append({
             "timestamp": ts,
             "topic": session_data.get("topic", ""),
-            "file": filename,
-            "step": session_data.get("step", ""),
+            "folder": folder,
+            "output_type": session_data.get("output_type", "summary"),
         })
         self._save_settings(self.settings)
-        return filepath
+        return folder, session_file
 
 
 config = Config()

@@ -111,3 +111,6 @@ docs/_build/
 
 # Local config overrides
 *.local.json
+
+# Generated blog content
+data/blog_posts/

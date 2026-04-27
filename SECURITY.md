@@ -23,7 +23,7 @@
 
 | Step | Action |
 |------|--------|
-| **1** | Email: **kashsightplatform@gmail.com** |
+| **1** | Email: **kashsight@gmail.com** |
 | **2** | Include: description, reproduction steps, potential impact, suggested fix |
 | **3** | We will respond within **48 hours** with acknowledgment |
 
@@ -136,9 +136,9 @@ Before submitting a pull request, verify:
 
 | Purpose | Method |
 |---------|--------|
-| **Report vulnerability** | kashsightplatform@gmail.com |
-| **Security questions** | Open a [private discussion](https://github.com/kashsightplatform/kseye/discussions) |
-| **General** | [GitHub Issues](https://github.com/kashsightplatform/kseye/issues) |
+| **Report vulnerability** | kashsight@gmail.com |
+| **Security questions** | Open a [private discussion](https://github.com/kashsight/kseye/discussions) |
+| **General** | [GitHub Issues](https://github.com/kashsight/kseye/issues) |
 
 ---
 

@@ -1,4 +1,4 @@
-"""Allow running ks-eye as a module: python -m ks_eye"""
+"""ks-eye v2.0 entry point: python -m ks_eye"""
 from ks_eye.cli import main
 
 if __name__ == "__main__":

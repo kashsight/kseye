@@ -308,6 +308,6 @@ v1: "AI assists, human decides — every step of the way"
 ---
 
 <p align="center">
-  <a href="https://github.com/kashsightplatform/kseye/releases">View Releases</a> •
-  <a href="https://github.com/kashsightplatform/kseye">Back to README</a>
+  <a href="https://github.com/kashsight/kseye/releases">View Releases</a> •
+  <a href="https://github.com/kashsight/kseye">Back to README</a>
 </p>

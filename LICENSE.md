@@ -47,14 +47,14 @@ If you use this software in academic, research, or published contexts, please pr
 
 ```
 ks-eye v1.0.0 — KashSight Platform
-https://github.com/kashsightplatform/kseye
+https://github.com/kashsight/kseye
 ```
 
 **Citation (APA):**
 ```
 KashSight Platform. (2026). ks-eye: AI-Human Collaborative Research 
 Assistant (Version 3.1) [Computer software]. 
-https://github.com/kashsightplatform/kseye
+https://github.com/kashsight/kseye
 ```
 
 ---
@@ -65,8 +65,8 @@ For licensing inquiries, commercial permissions, or questions:
 
 | Method | Details |
 |--------|---------|
-| **Email** | kashsightplatform@gmail.com |
-| **GitHub** | [github.com/kashsightplatform](https://github.com/kashsightplatform) |
+| **Email** | kashsight@gmail.com |
+| **GitHub** | [github.com/kashsight](https://github.com/kashsight) |
 | **Website** | [kash-sight.web.app](https://kash-sight.web.app/kseye.html) |
 
 ---
@@ -78,7 +78,7 @@ For licensing inquiries, commercial permissions, or questions:
 ---
 
 <p align="center">
-  <strong>Made with ❤️ by <a href="https://github.com/kashsightplatform">KashSight</a></strong>
+  <strong>Made with ❤️ by <a href="https://github.com/kashsight">KashSight</a></strong>
 </p>
 
 <p align="center">
